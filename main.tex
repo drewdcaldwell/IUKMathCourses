@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}   % Required for proof environment
+\usepackage{amsmath}   % Required for proof environment
+\usepackage{titlesec}
+\usepackage{amssymb}
+\titleformat*{\subsection}{\normalfont}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\begin{titlepage}
+\scshape
+\centering
+\raisebox{-\baselineskip}{\rule{\textwidth}{1px}}
+\vspace{.3cm}
+\rule{\textwidth}{.5px}
+\vspace{.3cm}
+{\huge{{Math-M413 Homework 10}}}\par \vspace{0.3cm}
+Chapter 3, Section 4: 1, 2, 6, 9
+\rule{\textwidth}{2px}
+
+\large{Drew Caldwell}\\
+\large{Indiana University - Kokomo}\\
+\vspace{1.3cm}
+\vfill
+\today
+\end{titlepage}
+
+\section*{Chapter 3, Section 4: 1, 2, 6, 9}
+
+\section*{3.4.1}
+If $P$ is a perfect set and $K$ is compact, is the intersection $P \cap K$ always compact? Always perfect?
+
+\begin{proof}
+By definition, a perfect set P is closed and has no isolated points. So, the intersection of a closed set P and a closed and bounded set K will give us a closed and bounded set $P \cap K$. So since $P \cap K$ is closed and bounded it is always compact. However $P \cap K$ is not always perfect. For example, let $P = \mathbb{R}$, then $P \cap K = K$ and we already know that $K$ is not necessarily perfect by our questions definition of $K$.
+\end{proof}
+
+\section*{3.4.2}
+Does there exist a perfect set consisting of only rational numbers?
+\newline
+\newline
+No. By Theorem 1.4.11 We know that $\mathbb{Q}$ is countable, and since $\mathbb{Q}$ is countable, any subset is also countable. We also know that a non-empty perfect set is uncountable. Since a set can't be countable and uncountable we have a contradiction, and We know that there is no perfect set that consists of only rational numbers.
+
+
+\section*{3.4.6}
+Prove Theorem 3.4.6
+\subsubsection*{\textbf{Theorem 3.4.6}}
+A set $E \subseteq R$ is connected if and only if, for all nonempty
+disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always exists a convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other.
+
+\begin{proof}
+Since this is an IFF proof we have to show that,
+\begin{enumerate}
+\item $E \subseteq \mathbb{R} \implies [(x_n) \rightarrow x  \text{ where } (x_n),x \in A \text{ or } (x_n),x \in B]$
+\item $[(x_n) \rightarrow x \text{ where } (x_n),x \in A \text{ or } (x_n),x \in B] \implies  E \subseteq \mathbb{R}$
+\end{enumerate}
+
+
+First let it be true that a set $E \subseteq \mathbb{R}$ is connected. Since it is connected, we know that E is connected if and only if $E = A \cup B$ where $A$ and $B$ are disjoint and non empty subsets of $E$. Then it is either the case that $\bar{A} \cap B = \emptyset$ or $A \cap \bar{B} = \emptyset$. Since $A$ and $B$ are both disjoint sets, WOLOG, we'll look at the case of $\bar{A} \cap B = \emptyset$, since we would get the same logical answer if we chose $A \cap \bar{B} = \emptyset$. So consider an element $x \in \bar{A} \cap B$. Then,
+
+\begin{equation} \label{eq1}
+\begin{split}
+ & x \in  \bar{A} \cap B\\
+\implies & x \in \bar{A}  \text{ and }  x \in B
+\end{split}
+\end{equation}
+
+So, since $x \in \bar{A}$. There exists a sequence $(x_n) \in A$, such that $(x_n) \rightarrow x$, since $\bar{A}$ is closed.
+
+
+\end{proof}
+
+
+\section*{3.4.9}
+Follow these steps to show that the Cantor set $ C_n = \bigcap\limits^\infty_{n=0} C_n$ described in Section 3.1 is totally disconnected in the sense described in Exercise 3.4.8.
+
+\subsection*{(a.)  Given $x, y \in C$, with $x < y$, set $\epsilon = y - x$. For each $n = 0, 1, 2,... $, the set $C_n$ consists of a finite number of closed intervals. Explain why there must exist an $N$ large enough so that it is impossible for $x$ and $y$ both to belong to the same closed interval of $C_N$ .}
+
+
+
+\subsection*{(b.) Argue that there exists a point$ z \notin C$ such that $x<z<y$. Explain how
+this proves that there can be no interval of the form $(a, b)$ with $a<b$ contained
+in C.}
+
+
+
+\subsection*{(c.) Show that $C$ is totally disconnected.}
+
+
+
+
+
+
+
+
+
+
+\section*{Notes}
+\subsection*{\textbf{Definitions:}}
+\subsubsection*{Perfect}
+A set $P \subseteq \mathbb{R}$ is $\textbf{perfect}$ if it is closed and contains no isolated points.
+\subsubsection*{Compact}
+A set $K \subseteq \mathbb{R}$ is \textbf{compact} if every sequence in $K$ has a subsequence that converges to a limit that is also in $K$.
+
+\subsection*{\textbf{Theorems:}}
+\subsubsection*{Theorem 1.4.11}
+(i) The set $\mathbb{Q}$ is countable. (ii) The set $\mathbb{R}$ is uncountable.
+
+\end{document}
+
