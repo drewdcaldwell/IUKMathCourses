@@ -34,7 +34,7 @@ Chapter 3, Section 4: 1, 2, 6, 9
 If $P$ is a perfect set and $K$ is compact, is the intersection $P \cap K$ always compact? Always perfect?
 
 \begin{proof}
-By definition, a perfect set P is closed and has no isolated points. So, the intersection of a closed set P and a closed and bounded set K will give us a closed and bounded set $P \cap K$.
+By definition, a perfect set P is closed and has no isolated points. So, the intersection of a closed set P and a closed and bounded set K will give us a closed and bounded set $P \cap K$. So since $P \cap K$ is closed and bounded it is always compact. However $P \cap K$ is not always perfect. For example, let $P = \mathbb{R}$, then $P \cap K = K$ and we already know that $K$ is not necessarily perfect by our questions definition of $K$.
 \end{proof}
 
 \section*{3.4.2}
@@ -51,8 +51,43 @@ A set $E \subseteq R$ is connected if and only if, for all nonempty
 disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always exists a convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other.
 
 \begin{proof}
+Since this is an IFF proof we have to show that,
+\begin{enumerate}
+\item $E \subseteq \mathbb{R} \implies [(x_n) \rightarrow x  \text{ where } (x_n),x \in A \text{ or } (x_n),x \in B]$
+\item $[(x_n) \rightarrow x \text{ where } (x_n),x \in A \text{ or } (x_n),x \in B] \implies  E \subseteq \mathbb{R}$
+\end{enumerate}
 
 
+First let it be true that a set $E \subseteq \mathbb{R}$ is connected. Since it is connected, we know that E is connected if and only if $E = A \cup B$ where $A$ and $B$ are disjoint and non empty subsets of $E$. Then it is either the case that $\bar{A} \cap B = \emptyset$ or $A \cap \bar{B} = \emptyset$. Since $A$ and $B$ are both disjoint sets, WOLOG, we'll look at the case of $\bar{A} \cap B = \emptyset$, since we would get the same logical answer if we chose $A \cap \bar{B} = \emptyset$. So consider an element $x \in \bar{A} \cap B$. Then,
+
+\begin{equation} \label{eq1}
+\begin{split}
+ & x \in  \bar{A} \cap B\\
+\implies & x \in \bar{A}  \text{ and }  x \in B
+\end{split}
+\end{equation}
+
+So, since $x \in \bar{A}$. There exists a sequence $(x_n) \in A$, such that $(x_n) \rightarrow x$, since $\bar{A}$ is closed.
+\newline
+\newline
+Now, to show the other way. Suppose that $E = A \cup B$, where $A$
+and $B$ are nonempty disjoint subsets of $E$ and there is a sequence
+$(x_n) \in A \text{ or } B$ such that $(x_n) \rightarrow x$ where and whatever
+set $(x_n)$ is in, $x$ is in the other.
+\newline
+\newline
+So, we WTS that $E$ is connected. To do so, we need to show that either
+$\bar{A} \cap B \ne \emptyset$ or that $A \cap \bar{B} \ne \emptyset$.
+ So, consider the sequence $(x_n)$. Let $(x_n) \in A$. WOLOG, we will
+ show that $\bar{A} \cap B \ne \emptyset$. So, since $(x_n) \in A$, By 
+ the definition of the question we know that $x \in B$. But, since 
+ $(x_n) \rightarrow x$, this implies that $x \in \bar{A}$. Now, since
+  $x \in \bar{A} \text{ and } x \in B$, $x \in \bar{A} \cap B \implies 
+  \bar{A} \cap B \ne \emptyset$. Tus, $E$ is connected.
+
+  So, a set $E \subseteq R$ is connected if and only if, for all nonempty
+  disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always exists a convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other.
+   
 
 \end{proof}
 
