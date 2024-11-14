@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.8.21)  13 NOV 2024 15:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.8.21)  14 NOV 2024 00:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -248,8 +248,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box54
-)
-No file MathM413_Homework10.aux.
+) (MathM413_Homework10.aux)
 \openout1 = `MathM413_Homework10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -270,7 +269,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
-(C:\MikTex\tex/context/base/mkii\supp-pdf.mkii
+ (C:\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count283
 \scratchdimen=\dimen161
@@ -290,6 +289,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 11.
+ (MathM413_Homework10.out) (MathM413_Homework10.out)
 \@outlinefile=\write3
 \openout3 = `MathM413_Homework10.out'.
 
@@ -304,7 +304,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (C:\MikTex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 49--59
 
  []
 
@@ -312,42 +312,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--45
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \end{equation}
-                    [1]
-Underfull \hbox (badness 10000) in paragraph at lines 70--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--87
-
+l.88 \end{proof}
+                 [1]
+Overfull \hbox (6.20392pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 Let $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 r[]; r[]; r[]; :::\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 be an enu-mer-a-tion of the ra-tio-nal num-bers. Also let $(\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 r[]\OT1/cmr/m/n/10 ) =
  []
 
 [2] [3] (MathM413_Homework10.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `MathM413_Homework10.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MathM413_Homework10.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `MathM413_Homework10.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9700 strings out of 476330
- 147490 string characters out of 5804181
- 1861660 words of memory out of 5000000
- 30022 multiletter control sequences out of 15000+600000
+ 9704 strings out of 476330
+ 147866 string characters out of 5804181
+ 1863660 words of memory out of 5000000
+ 30021 multiletter control sequences out of 15000+600000
  517065 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,76p,681b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MathM413_Homework10.pdf (4 pages, 148836 bytes).
+ 75i,5n,76p,337b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MathM413_Homework10.pdf (4 pages, 160778 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

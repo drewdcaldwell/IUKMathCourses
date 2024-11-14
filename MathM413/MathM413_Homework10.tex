@@ -31,81 +31,146 @@ Chapter 3, Section 4: 1, 2, 6, 9
 \section*{Chapter 3, Section 4: 1, 2, 6, 9}
 
 \section*{3.4.1}
-If $P$ is a perfect set and $K$ is compact, is the intersection $P \cap K$ always compact? Always perfect?
+If $P$ is a perfect set and $K$ is compact, is the intersection
+ $P \cap K$ always compact? Always perfect?
 
 \begin{proof}
-By definition, a perfect set P is closed and has no isolated points. So, the intersection of a closed set P and a closed and bounded set K will give us a closed and bounded set $P \cap K$. So since $P \cap K$ is closed and bounded it is always compact. However $P \cap K$ is not always perfect. For example, let $P = \mathbb{R}$, then $P \cap K = K$ and we already know that $K$ is not necessarily perfect by our questions definition of $K$.
+By definition, a perfect set P is closed and has no isolated 
+points. So, the intersection of a closed set P and a closed 
+and bounded set K will give us a closed and bounded set $P 
+\cap K$. So since $P \cap K$ is closed and bounded it is 
+always compact. However $P \cap K$ is not always perfect. 
+For example, let $P = \mathbb{R}$, then $P \cap K = K$ and 
+we already know that $K$ is not necessarily perfect by our 
+questions definition of $K$.
 \end{proof}
 
 \section*{3.4.2}
-Does there exist a perfect set consisting of only rational numbers?
+Does there exist a perfect set consisting of only rational 
+numbers?
 \newline
 \newline
-No. By Theorem 1.4.11 We know that $\mathbb{Q}$ is countable, and since $\mathbb{Q}$ is countable, any subset is also countable. We also know that a non-empty perfect set is uncountable. Since a set can't be countable and uncountable we have a contradiction, and We know that there is no perfect set that consists of only rational numbers.
+No. By Theorem 1.4.11 We know that $\mathbb{Q}$ is countable,
+ and since $\mathbb{Q}$ is countable, any subset is also 
+ countable. We also know that a non-empty perfect set is 
+ uncountable. Since a set can't be countable and uncountable 
+ we have a contradiction, and We know that there is no perfect 
+ set that consists of only rational numbers.
 
 
 \section*{3.4.6}
 Prove Theorem 3.4.6
 \subsubsection*{\textbf{Theorem 3.4.6}}
 A set $E \subseteq R$ is connected if and only if, for all nonempty
-disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always exists a convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other.
+disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always 
+exists a convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ 
+contained in one of $A$ or $B$, and $x$ an element of the other.
 
 \begin{proof}
 Since this is an IFF proof we have to show that,
 \begin{enumerate}
-\item $E \subseteq \mathbb{R} \implies [(x_n) \rightarrow x  \text{ where } (x_n),x \in A \text{ or } (x_n),x \in B]$
-\item $[(x_n) \rightarrow x \text{ where } (x_n),x \in A \text{ or } (x_n),x \in B] \implies  E \subseteq \mathbb{R}$
+\item $E \subseteq \mathbb{R} \implies [(x_n) \rightarrow x  
+\text{ where } (x_n),x \in A \text{ or } (x_n),x \in B]$
+
+\begin{proof}
+  Begin by assuming that $E \subseteq \mathbb{R}$ is connected. That is for any 
+  nonempty disjoint sets $A$ and $B$ such that $E = A \bigcup B$, there exists a 
+  convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ in $A$ or $B$ and $x$ in 
+  the set that $(x_n)$ is not in.
+  
+  Since $E$ is connected, it can't be separated into two disjoint nonempty open sets. If 
+  $A \cap \bar{B} \ne \emptyset$ or $B \cap \bar{A} \ne \emptyset$, then we 
+  would have a sequence $(x_n)$, WOLOG, contained in $A$ converging to a point $x \in \bar{B} 
+  \implies x \in B$, which is expected.
+
+  WOLOG, in the case of $\bar{A} \cap B \ne \emptyset$. Since $x \in \bar{A} \cap B$, $\exists (x_n) 
+  \in A$ such tath $(x_n) \rightarrow x$. Thus, $x \in B$.
+\end{proof}
+
+
+\item $[(x_n) \rightarrow x \text{ where } (x_n),x \in A 
+\text{ or } (x_n),x \in B] \implies  E \subseteq \mathbb{R}$
+\begin{proof}
+
+Now, assume that for every pair of non empty disjoint sets $A$ and $B$ such that 
+$E = A \cup B$ there exists a sequence $(x_n) \subset A \text{or} (x_n) \subset B$ where 
+$(x_n) \rightarrow x$ and $x \in A$ or $x \in B$, with $x$ being in set that $(x_n)$ is not in.
+
+We WTS that $E$ is connected. Suppose BWOC that $E$ is disconnected. Thus, we can write $E$ as the 
+union of two nonempty disjoint open sets $A$ and $B$, thus $E = A \cup B$ where $A \cap B = \emptyset$ 
+and $A \ne \emptyset \ne B$.
+
+WOLOG, assume that $\exists (x_n) \subset A \text{ such that } (x_n) \rightarrow x \text{ where } x \in B$. Since 
+$A$ and $B$ are disjoint this contradicts are assumption that $A$ and $B$ are disjoint and open, because a sequence in $A$ 
+that converges to an $x \in B$ forces a $x$ to belong to the closure of $A$, which implies that $A \cap \bar{B} \ne \emptyset$. 
+This is a contradiction to what we assumed. 
+
+Thus, $E$ must be connected.
+
+\end{proof}
 \end{enumerate}
 
-
-First let it be true that a set $E \subseteq \mathbb{R}$ is connected. Since it is connected, we know that E is connected if and only if $E = A \cup B$ where $A$ and $B$ are disjoint and non empty subsets of $E$. Then it is either the case that $\bar{A} \cap B = \emptyset$ or $A \cap \bar{B} = \emptyset$. Since $A$ and $B$ are both disjoint sets, WOLOG, we'll look at the case of $\bar{A} \cap B = \emptyset$, since we would get the same logical answer if we chose $A \cap \bar{B} = \emptyset$. So consider an element $x \in \bar{A} \cap B$. Then,
-
-\begin{equation} \label{eq1}
-\begin{split}
- & x \in  \bar{A} \cap B\\
-\implies & x \in \bar{A}  \text{ and }  x \in B
-\end{split}
-\end{equation}
-
-So, since $x \in \bar{A}$. There exists a sequence $(x_n) \in A$, such that $(x_n) \rightarrow x$, since $\bar{A}$ is closed.
-\newline
-\newline
-Now, to show the other way. Suppose that $E = A \cup B$, where $A$
-and $B$ are nonempty disjoint subsets of $E$ and there is a sequence
-$(x_n) \in A \text{ or } B$ such that $(x_n) \rightarrow x$ where and whatever
-set $(x_n)$ is in, $x$ is in the other.
-\newline
-\newline
-So, we WTS that $E$ is connected. To do so, we need to show that either
-$\bar{A} \cap B \ne \emptyset$ or that $A \cap \bar{B} \ne \emptyset$.
- So, consider the sequence $(x_n)$. Let $(x_n) \in A$. WOLOG, we will
- show that $\bar{A} \cap B \ne \emptyset$. So, since $(x_n) \in A$, By 
- the definition of the question we know that $x \in B$. But, since 
- $(x_n) \rightarrow x$, this implies that $x \in \bar{A}$. Now, since
-  $x \in \bar{A} \text{ and } x \in B$, $x \in \bar{A} \cap B \implies 
-  \bar{A} \cap B \ne \emptyset$. Tus, $E$ is connected.
-
   So, a set $E \subseteq R$ is connected if and only if, for all nonempty
-  disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always exists a convergent sequence $(x_n) \rightarrow x$ with $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other.
+  disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there 
+  always exists a convergent sequence $(x_n) \rightarrow x$ with 
+  $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other.
    
 
 \end{proof}
 
 
 \section*{3.4.9}
-Follow these steps to show that the Cantor set $ C_n = \bigcap\limits^\infty_{n=0} C_n$ described in Section 3.1 is totally disconnected in the sense described in Exercise 3.4.8.
-
-\subsection*{(a.)  Given $x, y \in C$, with $x < y$, set $\epsilon = y - x$. For each $n = 0, 1, 2,... $, the set $C_n$ consists of a finite number of closed intervals. Explain why there must exist an $N$ large enough so that it is impossible for $x$ and $y$ both to belong to the same closed interval of $C_N$ .}
-
-
-
-\subsection*{(b.) Argue that there exists a point$ z \notin C$ such that $x<z<y$. Explain how
-this proves that there can be no interval of the form $(a, b)$ with $a<b$ contained
-in C.}
+Let ${r_1, r_2, r_3, ...}$ be an enumeration of the rational 
+numbers, and for each $n \in \mathbb{N}$ set $\epsilon_n =(1/2)^n$ . 
+Define $O = \bigcup_{n=1}^{\infty} (V_{\epsilon_n}) (r_n), \text{ and let } F=O^c$
 
 
 
-\subsection*{(c.) Show that $C$ is totally disconnected.}
+\subsection*{(a.) Argue that $F$ is closed, nonempty set consisting only of
+ irrational numbers}
+
+Let $\{r_1, r_2, r_3, ...\}$ be an enumeration of the rational numbers. Also let 
+$(V_{\epsilon_n}) (r_n) = (r_n - \frac{1}{2^n}, r_n + \frac{1}{2^n})$ be epsilon 
+neighborhoods around each rational number. If we were take the union of all of 
+the neighborhoods we just defined, call it $O = \bigcup_{n=1}^{\infty} (V_{\epsilon_n}) (r_n)$, 
+the complement of this union by definition would be all the elements not in any of the 
+epsilon neighborhoods defined. 
+
+Thus, $O$ is an open set by definition since it is the countable 
+union of open intervals (example 3.2.2). Also, since $O$ is open, by Theorem 3.2.13, $F$ is 
+closed. 
+
+Since the irrational numbers are dense in $\mathbb{R}$, between any two numbers in 
+$\mathbb{R}$, there exists an irrational number. So, since $O$ covers intervals surrounding 
+every rational number, the irrational numbers outside of those intervals will be contained in $F$.
+Thus $F$ contains irrational numbers, and is thus nonempty.
+
+Thus, $F$ is a closed, nonempty set consisting of only irrational numbers.
+
+
+\subsection*{(b.)Does $F$ contain any nonempty open intervals? is $F$ totally disconnected?}
+
+An open interval $(a,b) \in F$ if every point in $(a,b)$ is not covered by any epsilon 
+neighborhood $V_{\epsilon_n}(r_n)$. But, since the rational numbers are dense in $\mathbb{R}$, 
+for any open interval around any irrational number, there are rational numbers that will fall within 
+the interval $(a,b)$. Thus, $F$ does not contain any nonempty open intervals.
+
+$F$ is totally disconnected if the only connected subsets are singletons. Since
+ between any two irrational numbers, there exists rational numbers that are in $O$, any 
+ segment of irratiional numbers does not form a continuous connection. Thus, $F$ is totally disconnected.
+
+\subsection*{(c.) Is it possible to know whether $F$ is perfect? If not, can we modify this construction 
+to produce a nonempty perfect set of irrational numbers?}
+
+$F$ is perfect if it is closed and contains no isolated points. Although $F$ is closed, it contains isolated 
+points. Consider an irrational number $x$. There exists a neighborhood around $x$ such that some rational 
+numbers are included. Thus making the irrational points not limit points of $F$. So, since $F$ contains 
+isolated points, it is not a perfect set.
+
+If we were to modify it, we would need to create a nonempty perfect set of irrational numbers. We could do this by 
+removing a countable dense set of rationals from a closed interval like $[0,1]$, in a specific way making sure that 
+the limit points of irrational numbers are retained.
+
 
 
 
