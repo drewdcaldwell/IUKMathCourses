@@ -1,0 +1,235 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}   % Required for proof environment
+\usepackage{amsmath}   % Required for proof environment
+\usepackage{titlesec}
+\usepackage{amssymb}
+\titleformat*{\subsection}{\normalfont}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\begin{titlepage}
+\scshape
+\centering
+\raisebox{-\baselineskip}{\rule{\textwidth}{1px}}
+\vspace{.3cm}
+\rule{\textwidth}{.5px}
+\vspace{.3cm}
+{\huge{{Math-M413 Exam 2}}}\par \vspace{0.3cm}
+\rule{\textwidth}{2px}
+
+\large{Drew Caldwell}\\
+\large{Indiana University - Kokomo}\\
+\vspace{1.3cm}
+\vfill
+\today
+\end{titlepage}
+
+\section*{Take Home Exam 2}
+
+\subsection*{1. Supposed that $K \in \mathbb{R}$ is compact and $F \subseteq K$ is closed.}
+
+\subsection*{(a) Prove that $F$ is compact.}
+\begin{proof}
+Given that $K$ is in $\mathbb{R}$ and is compact tells us that $K$ is closed and bounded by Theorem 3.3.4. 
+
+The question tells us that $F \in K$ is closed. Since $F$ is a subset of $K$ and $K$ is bounded, $F$ is also bounded 
+by $K$'s bounds. So, since $F$ is closed and bounded, by Theorem 3.3.4 it is compact.
+\end{proof}
+
+\subsection*{(b) Use the previous answer to prove that $F \bigcap K$ is compact.}
+\begin{proof}
+Given that $F \subseteq K$ is closed, that $K$ is compact and $F$ is closed, WTS that $F \bigcap K$ is compact. To do so, 
+we will again use Theorem 3.3.4, and show that $K \bigcap F$ is closed and bounded.
+
+We are given that $F$ is closed and that $K$ is compact which tells us that $K$ is closed. Since these are both closed, we 
+know that the intersection of two closed sets must also be closed by Theorem 3.2.14. Thus, $F \bigcap K$ is closed.
+
+Given that $F \subseteq K$ where $K$ is compact, we know that $K$ bust be bounded by Theorem 3.3.4. So, all of the elements 
+of $F \bigcap K$ must be contained within the bounds of the set $K$, telling us that $F \bigcap K$ is bounded.
+
+Thus, since $F \bigcap K$ has been found to be closed and bounded, by Theorem 3.3.4, $F \bigcap K$ must be compact.
+\end{proof}
+
+
+\subsection*{2. Prove the partial sums of an alternating series form a Cauchy sequence.}
+
+Using the definition provided in Exc 2.7.1. So let $(a_n)$ be a decreasing nonnegative sequence which 
+convergest to zero. WTS that $(s_n) = (\sum_{k=1}^{n} (-1)^{k+1}a_k)$ is cauchy where $(s_n)$ is the sequence 
+of partial sums;
+
+\begin{proof}
+
+    Let $\epsilon > 0$ be arbitary. By the question definition we are given that $(a_n)$ is nonnegative and decreasing, thus, 
+    $a_n \rightarrow 0$. So, there must exist an $N \in \mathbb{N}$ such that $a_n < \epsilon, \forall n \ge N$.
+
+    Now, let $n,m \in \mathbb{N}$ such that $n > m$. Then, combining all of these statements together, we have that,
+    $0 \le \sum_{k=m+1}^{n}(-1)^k a_k \le a_{m+1}$.
+
+    Then, for each $n,m \in \mathbb{N}$ where $n > n \ge N$, we can get the difference of partial sums.
+
+    \begin{align*}
+        |s_n - s_m| &= |\sum_{k=1}^{n}(-1)^{k+1}a_k - \sum_{k=1}^{m}(-1)^{k+1}a_k| \\
+                    &= |\sum_{k=m+1}^{n}(-1)^{k+1}a_k| \le a_{m+1} < \epsilon
+    \end{align*}
+
+    Thus the elements in $s_n$ get close enough together to conclude that they converge by the Cauchy Criterion.
+
+    So, the sequence of partial sums $s_n$ is a cauchy sequence.
+
+\end{proof}
+
+
+
+
+\subsection*{3. Prove that if $\sum |a_n|$ converges absolutely, then $\sum |(a_n)^2|$ also converges absolutely.}
+
+Given that the $\sum |a_n|$ converges, we WTS that $\sum |(a_n)^2|$ converges absolutely.
+
+The $\sum |a_n|$ converging tells us that as $n \rightarrow \infty$, $|a_n| \rightarrow 0$. Now 
+since $|a_n| \rightarrow 0$ this implieas that $(a_n)^2$ will approach 0 faster as it goes towards infinity.
+
+So, since it appears that $|a_n| \ge |(a_n)^2 \forall n \in \mathbb{N}$, we will use the comparison test to prove that 
+$\sum (a_n)^2$ converges absolutely.
+
+Given that the $\sum |a_n|$ converges
+
+
+
+
+\subsection*{4. Define sets A, B as $A = \{(-1)^{n+1} + \frac{5}{n} : n \in \mathbb{N}\}$, and $B = \{ x \in \mathbb{Q}: 0 < x < 1\}$ answer the following:}
+
+\subsection*{(a) What are the limit points?}
+
+The limit points of $A$ are $-1 \text{ and } 1$
+
+The limit points of $B$ are $0$ and $1$.
+
+\subsection*{(b) Is the set open, closed, or neither?}
+
+The set $A$ is neither.
+
+The set $B$ is neither.
+
+\subsection*{(c) Does the set contain isolated points? Identify or describe them if yes.}
+
+All of the points in set $A$ are isolated.
+
+The set $B$ does not have any isolated points.
+
+\subsection*{(d) Find the closure of each set.}
+
+The closure of $A = \bar{A} \bigcup \{-1,1\}$.
+
+Since as $n \rightarrow \infty$, $\frac{5}{n} \rightarrow 0$ and $(-1)^{n+1}$ bounces between $-1$ and $1$
+
+The closure of $B = [0,1]$
+
+\subsection*{5. Provide a counterexample for the following claim: $( \bar{E} )^c = \bar{(E^c)}$ }
+
+Consider the set $E = (-1,0) \cup (0,1)$, then $\bar{E} = [-1,1]$ and $( \bar{E} )^c = (- \infty, 1) \cup (1, \infty)$, and $\bar{(E^c)} =(-\infty, -1]
+ \cup {0} \cup [1,\infty)$. Thus, $( \bar{E} )^c \ne \bar{(E^c)}$.
+
+\subsection*{6. Find an explicit cover for the set \{ $1, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \ldots $ \} that does not have a finite subcover. Conclude that this set is not compact.}
+
+As the set goes towards infinity the elements are also members of a set that can be defined by $S = \{\frac{n}{n+1} : n \in \mathbb{N}\}$ (I know that 1 is not in this set but all others are.). 
+As this set $S$ goes to infinity, the elements get arbitrarly close to $1$ but never reach $1$. 
+
+Now consider the collection of intervals for each $n \in \mathbb{N}$. 
+
+
+\subsection*{7. Let $A,B$ be nonempty subsets of $\mathbb{R}$. Show that if there exist disjoint open sets $U, V$ with $A \subseteq U$ and $B \subseteq V$, then $A,B$ are separated.}
+
+\begin{proof}
+
+Given that $A \subseteq U$ and $B \subseteq V$ where $U \cap V = \emptyset$. We WTS that $A$ and $B$ are separated.
+
+To show that $A$ and $B$ are separated we need to show that $A \cap \bar{B} = \emptyset$ and $\bar{A} \cap B = \emptyset$. To start we will show that 
+$A \cap \bar{B} = \emptyset$.
+
+Let $b$ be any point in $B$. Since $B$ is a subset of $V$, $b \in V$. Consider the case where $b$ is a point in $B$, that is also within $\bar{A}$. Since $A$ 
+is closed, every neighborhood of $b$ will intersect $A$. Thus either $b$ is in $A$ or is a limit point of $A$.
+
+But, since $A \subseteq U$ and $U$ and $V$ are disjoint open sets. Since $b \in V$, it cannot be in $U$, and cannot be a limit point of $A$. Thus, $b \notin \bar{A}$ because a point in $B$ 
+cannot be in $\bar{A}$ while being in the disjoint open set $V$.
+
+So, it must be true that $A \cap \bar{B} = \emptyset$.
+
+WLOG, the argument is the same to show the other direction of $\bar{A} \cap B = \emptyset$.
+
+So, since $A \cap \bar{B} = \emptyset$ and $\bar{A} \cap B = \emptyset$ we know that by definition $A$ and $B$ are separated. So, if there exist disjoint open sets $U, V$ with $A \subseteq U$ and $B \subseteq V$, then $A,B$ are separated
+
+\end{proof}
+
+\subsection*{8. Prove each limit statement}
+
+\subsection*{(a) $\lim_{x \to -1} \left( 3x^2 + x - 4 \right) = -2$}
+
+The function $f(x) = 3x^2+x-4$ is continuous so we should be able to just plug in $-1$ for x and get our expected limit as $x \rightarrow -1$.
+
+\begin{align*}
+    f(-1) &= 3(-1)^2 + (-1) - 4 \\
+    f(-1) &= 3(1) - 1 - 4 \\
+    f(-1) &= 3 - 1 - 4 \\
+    f(-1) &= 2
+\end{align*}
+    
+Thus the $\lim_{x \to -1} \left( 3x^2 + x - 4 \right) = -2$.
+
+\subsection*{(b) $\lim_{x \to 2} \left( \frac{1}{x^2} \right) = 1/4$}
+
+Again the function $g(x) = \frac{1}{x^2}$ is continuous. So,
+
+\begin{align*}
+    g(2) &= \frac{1}{(2)^2} \\
+    g(2) &= \frac{1}{4}
+\end{align*}
+
+So the $\lim_{x \to 2} \left( \frac{1}{x^2} \right) = 1/4$.
+
+
+\subsection*{9. Consider the Cantor like set defined by removing the middle $\alpha$ from $[0,1]$ where $\alpha = \frac{1}{k}$ for $ k \ge 3$.}
+
+\subsection*{(a) For $\alpha = \frac{1}{4}$, that is $k = 4$, compute the length of the Cantor like set.}
+
+\subsection*{(b) Is this Cantor like set compact?}
+
+\subsection*{(c) Consider the formal equation $mC = [0,2]$ where $C$ is a Cantor like set and $m \in \mathbb{N}$. For the Cantor like set with $k = 4$, what is the 
+value of $m$? Use this value of $m$ to compute the dimension of this Cantor like set.}
+
+\subsection*{10. Give an example of each or state why the request is impossible/reference appropriate Theorems.}
+
+\subsection*{(a) Two functions $f, g$ neither one continuous at $0$ but buth $f(x)g(x)$ and $f(x) + g(x)$ are continuous at $0$. Note: you may only use two functions for this part.}
+
+Let,
+
+\begin{equation}
+    f(x) =
+        \begin{cases}
+            1 & \text{if } x \ge 0, \\
+            0 & \text{if } x > 0.
+        \end{cases}
+    \end{equation}
+
+and
+
+\begin{equation}
+    g(x) =
+        \begin{cases}
+            1 & \text{if } x > 0, \\
+            0 & \text{if } x \le 0.
+        \end{cases}
+    \end{equation}
+
+Then, 
+
+Then, $f(x)g(x) = 0, \forall n \in \mathbb{N}$. Also, $f(x) + g(x) = 1, \forall n \in \mathbb{N}$. Both of these are continuous at 0.
+
+\subsection*{(b) Two functions $f, g$ such that $f$ is continuous at $0$, $g$ is not continuous at $0$, but $f(x)g(x)$ is continuous at 0.}
+
+\subsection*{(c) A function $f(x)$ that is not continuous at $0$ such that $f(x) + \frac{1}{f(x)}$ is continuous at $0$.}
+
+\end{document}
+
