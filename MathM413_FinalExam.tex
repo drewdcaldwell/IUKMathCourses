@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}   % Required for proof environment
+\usepackage{amsmath}   % Required for proof environment
+\usepackage{titlesec}
+\usepackage{amssymb}
+\titleformat*{\subsection}{\normalfont}
+\titleformat*{\section}{\normalfont\bfseries}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\begin{titlepage}
+\scshape
+\centering
+\raisebox{-\baselineskip}{\rule{\textwidth}{1px}}
+\vspace{.3cm}
+\rule{\textwidth}{.5px}
+\vspace{.3cm}
+{\huge{{Math-M413 Final Exam}}}\par \vspace{0.3cm}
+\rule{\textwidth}{2px}
+
+\large{Drew Caldwell}\\
+\large{Indiana University - Kokomo}\\
+\vspace{1.3cm}
+\vfill
+\today
+\end{titlepage}
+
+\section*{1. Consider the set $A = \{\frac{1}{k} + \frac{1}{2^n} : k \in \mathbb{N}, n \in \mathbb{N}\}$. Answer the following questions about this set.}
+\subsection*{(a.) What are the limit points of $A$?}
+
+The only limit point of $A$ is $0$. As both $n,k \to \infty$ the elements in $A$ get arbitrarly close to $0$ but never reaches $0$.
+
+\subsection*{(b.) Is $A$ closed? If not, provide a sequence which has a limit point not in $A$.}
+
+$A$ is not closed. $A$ does not contain it's limit point $0$.
+
+\subsection*{(c.) Is $A$ compact?}
+
+For $A$ to be compact it has to be bounded and closed. We know that it is not closed so it cannot be compact.
+
+\subsection*{(d.) Is $\bar{A}$, the closure of $A$ compact? Outline a proof or explain why not.}
+
+The closure of $A$ is $\bar{A} = A \cup \{0\}$. The union of $0$ to the $A$ is enough to make the set closed. Looking at 
+individual parts of the setup of the set we see that $1/k$ and $1/2^n$ are both strictly decreasing, each are bounded. $1/k$ is bounded 
+by $1$ and the set $1/2^n$ is bounded by $1/2$. Thus both of them individually are bounded by $1$, implying that their sum is bounded, 
+making the set $A$ thus bounded.
+
+\section*{2. Prove that if $A,B$ are subsets of $\mathbb{R}$ and $f : A \to B$ is one-to-one, then either
+$f(a) \sim B$ or that the cardinality of $f(A)$ is strictly less than the cardinality of $B$. Using improvised symbols, this can be abbreviated 
+as $\#(A) \le \#(B)$.}
+
+\begin{proof}
+Let $f: A \to B$ be a one-to-one function. We WTS that either $f(A) = B$ or that $\#(A) \le \#(B)$.
+
+Consider the case where $f(A) = B$ here the elements of $A$ are getting directly mapped to $B$. Thus, 
+every element of $B$ corresponds to an element of $A$ through $f$. So, $A$ and $B$ have the same number of elements. 
+So we know that $\#(A) = \#(B)$.
+
+Now if $f(A) \ne B$, then $A$ has less elements than $B$. Since $f$ is one-to-one each element of $A$ gets mapped to a 
+distinct element in $B$. So, the set $f(A)$ is a strict subset of $B$. Making $\#f(A) < \#(B)$.
+
+So, combining both cases we have show that either $f(A) = B$ or $\#(A) < \#(B)$. Making it so that,
+$\#(A) \le \#(B)$.
+\end{proof}
+
+\section*{3. Show that $f(x) = x^5$ is continuous on $\mathbb{R}$ but not uniformly continuous on $\mathbb{R}$. You may use either the negation of the defintion or the fiven theorem.}
+\subsection*{}
+
+\section*{4. Provide an explicit example of a continuous function $f$ defined on an open set $A$ where $f(A)$ is closed. Be specific about $f$ and $A$.}
+
+Let $f(x) = sin(x)$. $f$ is defined on the open interval $A = (0, 2\pi)$, and the image $f(A) = [-1,1]$, which is a closed set.
+
+\section*{5. Where is the function below continuous?}
+\subsection*{}
+
+\section*{6. Let $h$ be continuous on the interval $A$ and $F$ be the set of points where $h$ is not one-to-one. That is,
+ $F = \{f \in A : h(x) = h(y) \text{ for some } x \ne y \text{ and } y \in A\}$. }
+\subsection*{}
+
+\section*{7. Apply the following theorem}
+\subsection*{Theorem 2. Let $f[a,b] \to \mathbb{R}$ be continuous. If $f(a)<L<f(b)$ or $f(a) > L > f(b)$. Then there exists a $c \in (a,b)$ such that $f(c) = L$.}
+\subsection*{Let $g : [0,1] \to [0,1]$ be continuous. Prove that there is at least one $c \in [0,1]$ such that $g(c) = c$. Hint: consider the function $g(x) -x$.}
+
+\section*{8. Prove that the sequence defined by $y_1 = 1$, $y_{n+1} = \frac{1}{4}(2y_n +3)$ has a limit.}
+
+\section*{9. Decide if each of the following is true or false. Assume that $f:\mathbb{R} \to \mathbb{R}$ is continuous on $\mathbb{R}$.}
+\subsection*{(a.) If $f(x) \le 0$ for all $x < 2$ then $f(2) \le 0$ as well.}
+\subsection*{(b.) If $f(r) = 0$ for all $r \in \mathbb{Q}$, then $f(x) =0$ for all $x \in \mathbb{R}$.}
+\subsection*{(c.) If $f(x_0) >0$ for some $x_0 \in \mathbb{R}$, then $f(x) >0$ for uncountably many points.}
+
+\section*{10.}
+\subsection*{(a.) Prove that $n^2 < n!$ for $n \ge 4$}
+\begin{proof}
+
+We will show that for $n \ge 4$ that $n^2 < n!$ by way of induction.
+
+Basis:
+\begin{align*}
+    n^2 &= 4^2 = 16, \\
+    n! &= 4! = 24, \\
+    n^2 = 16 &< 24 = n!.
+  \end{align*}
+
+Inductive Step: Assume that the inequality holds for some integer \( n \ge 4 \), i.e.,
+$n^2 < n!$.
+
+We need to show that $(n+1)^2 < (n+1)!$. First, we expand $(n+1)^2:$
+
+\begin{align*}
+  (n+1)^2 &= n^2 + 2n + 1 \\
+  n^2 &< n!  \text{   $($Using IH$)$}\\
+  n^2 + 2n + 1 &< (n+1) \cdot n! \\
+  (n+1)! &= (n+1) \cdot n!
+\end{align*}
+
+Thus, the inequality holds for $n+1$.
+
+
+\end{proof}
+\subsection*{(b.) Prove that the infintite series $\sum_{n=1}^{\infty} \frac{1}{n!}$ converges.}
+
+\begin{proof}
+    In order to show that the series $\sum_{n=1}^{\infty} \frac{1}{n!}$ converges we will apply the ratio test.
+
+    Using the ratio test, the sequence is $(a_n) = 1/n!$. Then,
+
+    \begin{align*}
+        \frac{a_{n+1}}{a_n}
+    \end{align*}
+\end{proof}
+
+
+
+
+\section*{11. Recall that for integers $a,b$, $a$ divides $b$ if there exists an integer $k$ such that $b = ak$. Prove that for all $n \in \mathbb{N}$, $3$ divides $n^3 -n$.}
+
+\section*{12. Determine if each sequence below is Cauchy. You are not asked to find the limit of the sequence although this may be helpful.}
+\subsection*{(a.) $(1/n)$}
+\subsection*{(b.) $(1+(-1)^n)$}
+\subsection*{(c.) $(\frac{n+1}{n})$}
+
+\section*{13. Let $b$ be a positive real number. Prove that $\lim_{x \to 0} \frac{(x+1)^b - 1}{x} = b$}
+\subsection*{(a.) Using the $\epsilon - \delta$ formulation of limit.}
+\subsection*{(b.) Using the neighborhood function of limit.}
+
+\end{document}
+
